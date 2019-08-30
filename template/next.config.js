@@ -1,8 +1,7 @@
 
 /* IMPORT */
 
-const path = require ( 'path' ),
-      TsconfigPathsPlugin = require ( 'tsconfig-paths-webpack-plugin' ),
+const TsconfigPathsPlugin = require ( 'tsconfig-paths-webpack-plugin' ),
       withSass = require ( '@zeit/next-sass' );
 
 /* CONFIG */
