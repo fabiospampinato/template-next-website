@@ -1,0 +1,11 @@
+{
+  "variablesOrder": ["CNAME", "name", "description", "version", "port", "author", "owner", "email"],
+  "variables": {
+    "version": {
+      "default": "1.0.0"
+    },
+    "port": {
+      "default": 3000
+    }
+  }
+}

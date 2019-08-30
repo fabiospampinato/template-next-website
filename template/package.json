@@ -1,0 +1,49 @@
+{
+  "private": true,
+  "name": "{{name}}",
+  "description": "{{description}}",
+  "version": "{{version}}",
+  "scripts": {
+    "clean": "del .next out",
+    "build": "next build",
+    "export": "next export",
+    "postexport": "cp -r .github/. out",
+    "start": "next start -p {{port}}",
+    "deploy": "npm run build && npm run export && git-directory-deploy --directory out",
+    "prod": "npm run build && npm run start",
+    "dev": "next -p {{port}}"
+  },
+  "bugs": {
+    "url": "https://github.com/{{owner}}/{{name}}/issues"
+  },
+  "license": "UNLICENSED",
+  "author": {
+    "name": "{{author}}",
+    "email": "{{email}}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/{{owner}}/{{name}}.git"
+  },
+  "keywords": [
+    "website",
+    "//TODO"
+  ],
+  "dependencies": {
+    "next": "^9.0.5",
+    "next-seo": "^2.0.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.3",
+    "@types/react": "^16.9.2",
+    "@types/react-dom": "^16.9.0",
+    "@zeit/next-sass": "^1.0.1",
+    "del-cli": "^2.0.0",
+    "git-directory-deploy": "^1.5.1",
+    "node-sass": "^4.12.0",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "typescript": "^3.6.2"
+  }
+}
