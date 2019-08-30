@@ -7,8 +7,12 @@ import Layout from '@layouts/layout';
 
 /* INDEX */
 
+const SEO = {
+  title: 'Home'
+};
+
 const Index = () => (
-  <Layout className="home" seo={{ title: 'Home' }}>
+  <Layout className="home" seo={SEO}>
     <Button href="/">Home</Button>
   </Layout>
 );
