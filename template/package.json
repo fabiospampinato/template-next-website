@@ -5,7 +5,7 @@
   "version": "{{version}}",
   "scripts": {
     "clean": "del .next out",
-    "build": "next build",
+    "build": "npm run clean && next build",
     "export": "next export",
     "postexport": "cp -r .github/. out",
     "start": "next start -p {{port}}",
