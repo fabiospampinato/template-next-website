@@ -8,7 +8,8 @@ import Layout from '@layouts/layout';
 /* INDEX */
 
 const SEO = {
-  title: 'Home'
+  title: '{{_ "startCase" name}}',
+  titleTemplate: '%s'
 };
 
 const Index = () => (
