@@ -13,6 +13,16 @@ const config = withSass ({
     config.resolve.plugins.push ( new TsconfigPathsPlugin () );
     if ( !config.optimization.minimizer ) config.optimization.minimizer = [];
     config.optimization.minimizer.push ( new OptimizeCSSAssetsPlugin () );
+    if ( !config.module.rules ) config.module.rules = [];
+    config.module.rules.unshift ({
+      test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+      use: {
+        loader: 'url-loader',
+        options: {
+          limit: 10000
+        }
+      }
+    });
     return config;
   },
   experimental: {
